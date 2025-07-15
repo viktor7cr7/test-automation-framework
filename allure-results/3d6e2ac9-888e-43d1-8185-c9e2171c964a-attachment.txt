@@ -1,3 +1,0 @@
-strict mode: missing type "object" for keyword "required" at "#/properties/orders/items" (strictTypes)
-strict mode: missing type "object" for keyword "additionalProperties" at "#/properties/orders/items" (strictTypes)
-strict mode: missing type "object" for keyword "properties" at "#/properties/orders/items" (strictTypes)

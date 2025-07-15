@@ -1,1 +1,0 @@
-Перехватыем запрос с эндпоинтом =  /api/v1/products?search=&category=All&sort-by-price=%D0%9D%D0%B5+%D0%B2%D1%8B%D0%B1%D1%80%D0%B0%D0%BD%D0%BE&sort-by-rating=%D0%9D%D0%B5+%D0%B2%D1%8B%D0%B1%D1%80%D0%B0%D0%BD%D0%BE&sort=price:,rating:&page=1

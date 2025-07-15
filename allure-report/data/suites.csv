@@ -1,8 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","4332","Покупка товара через модальное окно [Balance]","ui-tests","Fri Jun 27 01:08:57 MSK 2025","passed","Fri Jun 27 01:09:01 MSK 2025","Проверка покупки товаров","ui-tests\tests\e2e\buyProducts.spec.ts","",""
-"","3689","Покупка товара через корзину [Balance]","ui-tests","Sat Jun 28 12:30:39 MSK 2025","passed","Sat Jun 28 12:30:43 MSK 2025","Проверка покупки товаров","ui-tests\tests\e2e\buyProducts.spec.ts","",""
-"","4337","Фильтрация по поиску","ui-tests","Sat Jun 28 16:20:13 MSK 2025","passed","Sat Jun 28 16:20:17 MSK 2025","Проверка фильтрации продуктов","ui-tests\tests\integration\buyProducts\filter.spec.ts","",""
-"","1911","Получение списка тразакций","api-tests","Sat Jun 28 19:49:37 MSK 2025","passed","Sat Jun 28 19:49:39 MSK 2025","","api-tests\tests\transactions.spec.ts","",""
-"","2290","Корректное отображение пустого состояния","ui-tests","Fri Jun 27 00:53:37 MSK 2025","passed","Fri Jun 27 00:53:39 MSK 2025","Проверка отображения и взаимодействия с корзиной","ui-tests\tests\integration\cart.spec.ts","",""
-"","2157","Получение списка заказов","api-tests","Sat Jun 28 19:27:35 MSK 2025","passed","Sat Jun 28 19:27:38 MSK 2025","","api-tests\tests\orders.spec.ts","",""
-"","2274","Переход на первую страницу через нумерацию","ui-tests","Sat Jun 28 16:30:42 MSK 2025","passed","Sat Jun 28 16:30:44 MSK 2025","Проверка пагинации","ui-tests\tests\integration\buyProducts\pagination.spec.ts","",""

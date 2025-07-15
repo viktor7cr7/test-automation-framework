@@ -1,3 +1,0 @@
-{ amount: 4395, status: 'paid' }
-false
-/api/v1/auth/login
