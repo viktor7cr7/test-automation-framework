@@ -1,0 +1,15 @@
+{
+  "body": {
+    "type": "checkout.session.completed",
+    "data": {
+      "object": {
+        "metadata": {
+          "id_transaction": "230",
+          "amountConvertRuble": "4395.00",
+          "userId": "31",
+          "type": "balance_top_up"
+        }
+      }
+    }
+  }
+}

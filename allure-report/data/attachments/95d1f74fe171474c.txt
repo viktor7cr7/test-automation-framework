@@ -1,0 +1,3 @@
+strict mode: missing type "object" for keyword "required" at "#/properties/transactionItems/items" (strictTypes)
+strict mode: missing type "object" for keyword "additionalProperties" at "#/properties/transactionItems/items" (strictTypes)
+strict mode: missing type "object" for keyword "properties" at "#/properties/transactionItems/items" (strictTypes)

@@ -1,0 +1,19 @@
+{
+  "body": {
+    "type": "checkout.session.completed",
+    "data": {
+      "object": {
+        "metadata": {
+          "orderId": 870,
+          "type": "products_buy",
+          "infoQuntityAndIdProduct": [
+            {
+              "product_id": 992,
+              "quantity": 1
+            }
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1 @@
+priceProduct = 160000,2500

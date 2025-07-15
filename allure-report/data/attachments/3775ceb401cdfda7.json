@@ -1,0 +1,14 @@
+{
+  "body": {
+    "paymentMethod": "Credit Card",
+    "items": [
+      {
+        "name": "Viridis abduco iure perferendis denuo cervus.",
+        "description": "Stultus subvenio atqui antea timidus odit adopto agnosco perferendis.",
+        "product_id": 996,
+        "price": 128496,
+        "quantity": 1
+      }
+    ]
+  }
+}
