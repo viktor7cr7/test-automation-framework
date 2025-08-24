@@ -14,8 +14,14 @@ jobs:
       PGP_URL: ${{ secrets.USER_EMAIL_REGISTER }}
       PGP_URL_ADMIN: ${{ secrets.USER_EMAIL_REGISTER }}
       BASE_UI_URL: ${{ secrets.USER_EMAIL_REGISTER }}
-      BASE_URL: 'https://ready-pants-guess.loca.lt'
+      BASE_URL: 'https://huge-parrots-grin.loca.lt'
     steps:
+      - name: 'health cheack tunnel'
+        run: |
+          curl -X GET \
+              -H "Accept: application/json" \
+              -H "bypass-tunnel-reminder: 123" \
+              https://huge-parrots-grin.loca.lt \'
       - uses: actions/checkout@v4
         with:
           node-version: '20'
