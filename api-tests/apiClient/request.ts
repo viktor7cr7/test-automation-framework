@@ -23,7 +23,7 @@ export class RequestApi {
       ...(requestOptions['headers'] || {}),
     };
 
-    this.allureLogger.attachRequest(requestOptions);
+    this.allureLogger.attachRequest(requestOptions, endpoint);
 
     const { url, ...safeRequestOptions } = requestOptions;
 
@@ -34,15 +34,26 @@ export class RequestApi {
       });
 
       if (response.status() >= 500) {
-        const result = await this.parser.transformResponse<TResponse>(response);
-        this.allureLogger.attachResponse(requestOptions, result);
-        return result;
-      } else {
         throw new Error(`Ошибка сервера: ${response.status()}`);
       }
-    } catch (error: any) {
-      console.error('fetch error', error);
-      throw new Error(error?.message || 'Unknown fetch error');
+
+      const result = await this.parser.transformResponse<TResponse>(response);
+
+      try {
+        this.allureLogger.attachResponse(requestOptions, result);
+      } catch (error) {
+        console.warn('Ошибка при логировании ответа', error);
+      }
+
+      return result;
+    } catch (error: unknown) {
+      const message = `Ошибка при выполнении запроса на ${endpoint}`;
+      if (error instanceof Error) {
+        console.error(`${message}: ${error.message}`, error);
+        throw new Error(`${message}: ${error.message}`);
+      }
+      console.error(`${message}: Неизвестная ошибка`, error);
+      throw new Error(`${message}: Неизвестная ошибка`);
     }
   }
 }
