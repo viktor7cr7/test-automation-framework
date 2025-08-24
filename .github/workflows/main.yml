@@ -1,0 +1,14 @@
+name: "CI to Pull Requested"
+on: 
+  repository_dispatch:
+    type: [run-tests]
+    
+jobs:
+  running-e2e-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          node-version: '20'
+      - run: npm i
+      - run: npm run test:api
