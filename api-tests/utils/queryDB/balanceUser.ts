@@ -26,4 +26,3 @@ export async function getInfoBalanceTransaction(idTranscation: number) {
   }
 }
 
-getInfoBalanceTransaction(149).then((data) => console.log(data));
