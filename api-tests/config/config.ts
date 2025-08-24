@@ -2,7 +2,7 @@ import { PlaywrightMultipart } from '../../types/request/multipart.ts';
 import { HTTPMethods, RequestOptions } from '../../types/request/request.ts';
 
 export const config = {
-  baseUrl: 'http://localhost:3005',
+  baseUrl: `${process.env.BASE_URL}`,
   endpoints: {
     REGISTER: '/api/v1/auth/register',
     LOGIN: '/api/v1/auth/login',

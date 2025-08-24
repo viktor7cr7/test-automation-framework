@@ -3,14 +3,14 @@ import { BasePage } from '../basePage.ts';
 import { BASE_UI_URL } from '../config/environment.ts';
 
 export class OrdersPage extends BasePage {
-  public searchInput = this.page.getByTestId('search-id');
-  public orderItem = this.page.getByTestId('order-item');
-  public orderId = this.page.getByTestId('order-id');
-  public sortPriceSelect = this.page.getByTestId('sort-price');
-  public sortDateSelect = this.page.getByTestId('sort-date');
-  public sortStatusSelect = this.page.getByTestId('sort-status');
-  public orderItemPrice = this.page.getByTestId('total-price-order');
-  public orderDate = this.page.getByTestId('create-order');
+  private searchInput = this.page.getByTestId('search-id');
+  private orderItem = this.page.getByTestId('order-item');
+  private orderId = this.page.getByTestId('order-id');
+  private sortPriceSelect = this.page.getByTestId('sort-price');
+  private sortDateSelect = this.page.getByTestId('sort-date');
+  private sortStatusSelect = this.page.getByTestId('sort-status');
+  private orderItemPrice = this.page.getByTestId('total-price-order');
+  private orderDate = this.page.getByTestId('create-order');
 
   uniqeElement = this.searchInput;
 
@@ -52,5 +52,10 @@ export class OrdersPage extends BasePage {
   @logDecorator
   async searchById(id: string) {
     await this.searchInput.fill(id);
+  }
+
+  @logStepWithReturn
+  async getOrderId() {
+    return this.orderId;
   }
 }

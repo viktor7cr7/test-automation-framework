@@ -13,12 +13,15 @@ export class UserService {
     this.userController = new UserController(contextApi);
   }
 
+
+  
+
   async updateInfoUser(body: IUserUpdateInfo) {
     const formData = {
       avatar: {
         name: 'avatar.png',
         mimeType: 'image/png',
-        buffer: fs.readFileSync('./api-tests/data/img/cat.jpg'),
+        buffer: fs.readFileSync('./data/img/cat.jpg'),
       },
       name: body.name,
       email: body.email,

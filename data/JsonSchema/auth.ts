@@ -4,4 +4,4 @@ export const responseDefaultSchema = {
     msg: { type: 'string' },
   },
   required: ['msg'],
-};
+}

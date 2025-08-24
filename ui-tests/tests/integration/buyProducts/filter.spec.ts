@@ -3,9 +3,13 @@ import { expect, test } from '../../../fixtures/service.fixtures.ts';
 import { config } from '../../../../api-tests/config/config.ts';
 import { changeElementDirection, getElements } from '../../../utils/html/htmlSuppport.ts';
 import { ICategory } from '../../../types/buyProducts/filter.ts';
+import * as allure from 'allure-js-commons';
 
 test.describe('Проверка фильтрации продуктов', () => {
   test('Фильтрация по поиску', async ({ mockService, buyProductsPage, filterPages, loginService }) => {
+    allure.severity('critical');
+    allure.issue('jira.com', 'Фильтрация по поиску продуктов');
+
     await loginService.login();
     await mockService.getProducts(productsForFilters);
     const productSearchName = productsForFilters.products[0]['name'];
