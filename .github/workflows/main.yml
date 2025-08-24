@@ -17,6 +17,7 @@ jobs:
       BASE_URL: 'https://angry-colts-find.loca.lt'
     steps:
       - name: 'health cheack tunnel'
+        continue-on-error: true
         run: |
           curl -X GET \
               -H "Accept: application/json" \
