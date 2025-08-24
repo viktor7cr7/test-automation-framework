@@ -6,6 +6,14 @@ on:
 jobs:
   running-e2e-tests:
     runs-on: ubuntu-latest
+    env:
+      USER_EMAIL_REGISTER: ${{ secrets.USER_EMAIL_REGISTER }}
+      USER_LOGIN: ${{ secrets.USER_EMAIL_REGISTER }}
+      USER_PASSWORD: ${{ secrets.USER_EMAIL_REGISTER }}
+      USER_NAME: ${{ secrets.USER_EMAIL_REGISTER }}
+      PGP_URL: ${{ secrets.USER_EMAIL_REGISTER }}
+      PGP_URL_ADMIN: ${{ secrets.USER_EMAIL_REGISTER }}
+      BASE_UI_URL: ${{ secrets.USER_EMAIL_REGISTER }}
     steps:
       - uses: actions/checkout@v4
         with:
