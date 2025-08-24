@@ -14,6 +14,7 @@ jobs:
       PGP_URL: ${{ secrets.USER_EMAIL_REGISTER }}
       PGP_URL_ADMIN: ${{ secrets.USER_EMAIL_REGISTER }}
       BASE_UI_URL: ${{ secrets.USER_EMAIL_REGISTER }}
+      BASE_URL: 'https://ready-pants-guess.loca.lt'
     steps:
       - uses: actions/checkout@v4
         with:
