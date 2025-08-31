@@ -14,7 +14,7 @@ jobs:
       PGP_URL: ${{ secrets.USER_EMAIL_REGISTER }}
       PGP_URL_ADMIN: ${{ secrets.USER_EMAIL_REGISTER }}
       BASE_UI_URL: ${{ secrets.USER_EMAIL_REGISTER }}
-      BASE_URL: 'https://c29de7f7a5595b.lhr.life'
+      BASE_URL: 'https://7dc1abdf2ff8e3.lhr.life'
     steps:
       - name: 'health cheack tunnel'
         continue-on-error: true
