@@ -15,13 +15,16 @@ export class AuthHelper implements IAuthHelper {
     if (this.isAuthenticated) return;
 
     try {
+      console.log(config.baseUrl)
+      console.log(USER_EMAIL_LOGIN)
+      console.log(USER_PASSWORD)
       const response = await this.apiContext.post(`${config.baseUrl}/api/v1/auth/login`, {
         data: {
           email: USER_EMAIL_LOGIN,
           password: USER_PASSWORD,
         },
       });
-
+  
       if (response.status() !== 200) {
         throw new Error('Ошибка авторизации, проверьте данные');
       }
