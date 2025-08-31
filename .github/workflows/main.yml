@@ -19,10 +19,7 @@ jobs:
       - name: 'health cheack tunnel'
         continue-on-error: true
         run: |
-          curl -X GET \
-              -H "Accept: application/json" \
-              -H "bypass-tunnel-reminder: 123" \
-              https://c29de7f7a5595b.lhr.life \'
+          curl -X GET https://7dc1abdf2ff8e3.lhr.life
       - uses: actions/checkout@v4
         with:
           node-version: '20'
