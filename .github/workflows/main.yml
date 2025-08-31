@@ -19,7 +19,7 @@ jobs:
       - name: 'health cheack tunnel'
         continue-on-error: true
         run: |
-          curl -X GET https://7dc1abdf2ff8e3.lhr.life
+          curl -X GET https://343f29df4971b0.lhr.life
       - uses: actions/checkout@v4
         with:
           node-version: '20'
