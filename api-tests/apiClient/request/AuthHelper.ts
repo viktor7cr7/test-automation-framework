@@ -28,7 +28,7 @@ export class AuthHelper implements IAuthHelper {
       if (response.status() !== 200) {
         console.log(response.status())
         console.log(response.statusText())
-        console.log(response.text())
+        console.log(await response.text())
         throw new Error('Ошибка авторизации, проверьте данные');
       }
 
