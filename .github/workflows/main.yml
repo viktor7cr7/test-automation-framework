@@ -8,12 +8,11 @@ jobs:
     runs-on: ubuntu-latest
     env:
       USER_EMAIL_REGISTER: ${{ secrets.USER_EMAIL_REGISTER }}
-      USER_LOGIN: ${{ secrets.USER_EMAIL_REGISTER }}
-      USER_PASSWORD: ${{ secrets.USER_EMAIL_REGISTER }}
-      USER_NAME: ${{ secrets.USER_EMAIL_REGISTER }}
-      PGP_URL: ${{ secrets.USER_EMAIL_REGISTER }}
-      PGP_URL_ADMIN: ${{ secrets.USER_EMAIL_REGISTER }}
-      BASE_UI_URL: ${{ secrets.USER_EMAIL_REGISTER }}
+      USER_LOGIN: ${{ secrets.USER_LOGIN }}
+      USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+      USER_NAME: ${{ secrets.USER_NAME }}
+      PGP_URL: ${{ secrets.PGP_URL }}
+      PGP_URL_ADMIN: ${{ secrets.PGP_URL_ADMIN }}
       BASE_URL: ${{ secrets.BASE_URL }}
     steps:
       - name: 'health cheack tunnel'
