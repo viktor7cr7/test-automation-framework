@@ -24,3 +24,19 @@ jobs:
           node-version: '20'
       - run: npm i
       - run: npm run test:api
+      
+      - name: Build test report
+        uses: simple-elf/allure-report-action@v1.7
+        if: always()
+        with:
+          gh_pages: allure-pages
+          allure_history: allure-history
+          allure_results: allure-results
+
+      - name: Publish test report
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.ALLURE_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
