@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Mon Sep 01 19:46:20 GMT 2025","Mon Sep 01 19:46:21 GMT 2025","583","api-tests","api-tests/tests/user.spec.ts","","","","Обновление данных пользователя",""

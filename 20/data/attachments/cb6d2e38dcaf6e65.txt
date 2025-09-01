@@ -1,0 +1,14 @@
+Ошибка авторизации: Error: Ошибка авторизации, проверьте данные
+    at AuthHelper.authIfNeeded (/home/runner/work/test-automation-framework/test-automation-framework/api-tests/apiClient/request/AuthHelper.ts:32:15)
+    at RequestApi.send (/home/runner/work/test-automation-framework/test-automation-framework/api-tests/apiClient/request.ts:19:5)
+    at UserController.updateInfoUser (/home/runner/work/test-automation-framework/test-automation-framework/api-tests/controllers/users.ts:32:12)
+    at UserService.updateInfoUser (/home/runner/work/test-automation-framework/test-automation-framework/services/user.ts:30:22)
+    at /home/runner/work/test-automation-framework/test-automation-framework/api-tests/tests/user.spec.ts:5:20
+    at /home/runner/work/test-automation-framework/test-automation-framework/node_modules/playwright/lib/worker/workerMain.js:304:9
+    at /home/runner/work/test-automation-framework/test-automation-framework/node_modules/playwright/lib/worker/testInfo.js:277:11
+    at TimeoutManager.withRunnable (/home/runner/work/test-automation-framework/test-automation-framework/node_modules/playwright/lib/worker/timeoutManager.js:67:14)
+    at TestInfoImpl._runWithTimeout (/home/runner/work/test-automation-framework/test-automation-framework/node_modules/playwright/lib/worker/testInfo.js:275:7)
+    at /home/runner/work/test-automation-framework/test-automation-framework/node_modules/playwright/lib/worker/workerMain.js:302:7
+    at WorkerMain._runTest (/home/runner/work/test-automation-framework/test-automation-framework/node_modules/playwright/lib/worker/workerMain.js:277:5)
+    at WorkerMain.runTestGroup (/home/runner/work/test-automation-framework/test-automation-framework/node_modules/playwright/lib/worker/workerMain.js:193:11)
+    at process.<anonymous> (/home/runner/work/test-automation-framework/test-automation-framework/node_modules/playwright/lib/common/process.js:70:22)
