@@ -76,7 +76,7 @@ export class BuyProductsService {
     const totalPriceProductCart = await clearPrice(
       (await (await this.cartModal.getTotalPrice()).textContent()) as string
     );
-    console.log('priceProduct = ' + priceProduct);
+ 
     const totalPriceProduct = priceProduct.reduce((acc, price) => (acc += price), 0);
 
     const [sortingNamesProduct, sortingNamesCartProduct] = sortStringArrays(
