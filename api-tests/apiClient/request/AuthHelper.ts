@@ -21,7 +21,7 @@ export class AuthHelper implements IAuthHelper {
           password: USER_PASSWORD,
         },
       });
-
+      console.log(config.baseUrl)
       if (response.status() !== 200) {
         throw new Error('Ошибка авторизации, проверьте данные');
       }
