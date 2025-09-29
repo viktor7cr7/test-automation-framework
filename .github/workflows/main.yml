@@ -6,9 +6,37 @@ on:
 jobs:
   running-e2e-tests:
     runs-on: ubuntu-latest
+    env:
+      USER_EMAIL_REGISTER: ${{ secrets.USER_EMAIL_REGISTER }}
+      USER_LOGIN: ${{ secrets.USER_LOGIN }}
+      USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
+      USER_NAME: ${{ secrets.USER_NAME }}
+      PGP_URL: ${{ secrets.PGP_URL }}
+      PGP_URL_ADMIN: ${{ secrets.PGP_URL_ADMIN }}
+      BASE_URL: ${{ secrets.BASE_URL }}
     steps:
+      - name: 'health cheack tunnel'
+        continue-on-error: true
+        run: |
+          curl -X GET https://073f2b730abd1d.lhr.life
       - uses: actions/checkout@v4
         with:
           node-version: '20'
       - run: npm i
       - run: npm run test:api
+      
+      - name: Build test report
+        uses: simple-elf/allure-report-action@v1.7
+        if: always()
+        with:
+          gh_pages: allure-pages
+          allure_history: allure-history
+          allure_results: allure-results
+
+      - name: Publish test report
+        uses: peaceiris/actions-gh-pages@v3
+        if: always()
+        with:
+          github_token: ${{ secrets.ALLURE_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
