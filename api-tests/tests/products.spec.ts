@@ -21,7 +21,6 @@ test.describe('Фильтрация продуктов', () => {
       search: searchName,
     });
     const response = await productsController.getAllProducts(queryParams.toString());
-    console.log(response.body);
     expect(assertionValue(response.body.products, 'name', searchName)).toBe(true);
 
     idsProduct = productsId;
