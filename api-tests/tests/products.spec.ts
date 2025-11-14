@@ -16,7 +16,6 @@ test.describe('Фильтрация продуктов', () => {
     const searchName = 'тестовый продукт';
     const dataProduct = generateDataProduct({ name: searchName });
     const productsId = getValuesArrayObjects(await createProduct(1, dataProduct), 'productId');
-    console.log(productsId);
     const queryParams = new URLSearchParams({
       search: searchName,
     });
@@ -35,7 +34,6 @@ test.describe('Фильтрация продуктов', () => {
       category: filterCategory,
     });
     const response = await productsController.getAllProducts(queryParams.toString());
-    console.log(response.body);
     expect(assertionValue(response.body.products, 'category', filterCategory)).toBe(true);
 
     idsProduct = productsId;
