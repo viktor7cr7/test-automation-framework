@@ -10,6 +10,7 @@ import { getUserInfo } from '../api-tests/utils/queryDB/user.ts';
 export class UserService {
   private userController: UserController;
   constructor(contextApi: APIRequestContext) {
+    console.log(contextApi)
     this.userController = new UserController(contextApi);
   }
 
