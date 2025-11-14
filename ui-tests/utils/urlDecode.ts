@@ -8,4 +8,3 @@ export async function urlAssertion(expectedUrl: string, receivedUrl: string) {
     pathname === received.pathname
   );
 }
-console.log(1230
