@@ -20,6 +20,7 @@ export async function balanceUSDValidation(totalPrice: number, usdOrder: number)
   const convertUSD = +(totalPrice / DOLLAR_EXCHANGE_RATE).toFixed();
 
   const transformUsd = +usdOrder.toFixed();
+  console.log(transformUsd)
   expect
     .soft(convertUSD, `Значения после конвертации валюты должны быть равны, ${totalPrice} === ${transformUsd}`)
     .toBe(transformUsd);
