@@ -1,0 +1,3 @@
+function generateName() {
+    return `ivanov`
+}
