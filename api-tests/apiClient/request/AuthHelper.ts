@@ -24,7 +24,7 @@ export class AuthHelper implements IAuthHelper {
           password: USER_PASSWORD,
         },
       });
-  
+
       if (response.status() !== 200) {
         console.log(response.status())
         console.log(response.statusText())
