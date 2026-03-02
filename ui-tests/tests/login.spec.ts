@@ -4,7 +4,7 @@ import { test, expect } from '../fixtures/pages-fixtures.ts';
 import { LocatorKeysHomePage } from '../types/dataDriven.ts';
 
 test.describe('Авторизация пользователя с валидными данными', () => {
-  test('Авторизация с валидными данными', async ({ homePage, buyProductsPage }) => {
+  test.only('Авторизация с валидными данными', async ({ homePage, buyProductsPage }) => {
     await homePage.openHome();
     await homePage.login({ email: USER_EMAIL_LOGIN, password: USER_PASSWORD });
     await buyProductsPage.waitForOpened();

@@ -8,6 +8,7 @@ import { AuthController } from './auth.ts';
 import { USER_EMAIL_LOGIN, USER_PASSWORD } from '../config/environment.ts';
 import { IBuyProduct, IWebhookStripe } from '../../types/request/buyProduct.ts';
 import { BaseController } from './baseController.ts';
+import { post } from '../../ui-tests/utils/decorators.ts';
 
 const { endpoints } = config;
 
@@ -37,10 +38,12 @@ export class ProductsController extends BaseController {
     );
   }
 
+  @post('/post')
   async setRatingProduct(orderId: number, body: ISetRatingItem) {
     const headers = (await this.auth.login({ email: USER_EMAIL_LOGIN, password: USER_PASSWORD }))['headers'];
     const endpoint = endpoints.SET_RATING_PRODUCT(orderId);
     const options = createRequestOptions({ method: HTTPMethods.PUT, data: body, ...headers, displayUrl: endpoint });
+
     return await this.request.send<ResponseInfo>(endpoint, options);
   }
 
@@ -48,6 +51,7 @@ export class ProductsController extends BaseController {
     const headers = (await this.auth.login({ email: USER_EMAIL_LOGIN, password: USER_PASSWORD }))['headers'];
     const endpoint = endpoints.BUY_PRODUCT;
     const options = createRequestOptions({ method: HTTPMethods.POST, data: body, ...headers, displayUrl: endpoint });
+                              @post
     return await this.request.send<T>(endpoint, options);
   }
 

@@ -2,6 +2,10 @@ import { Locator } from '@playwright/test';
 import { BasePage } from './basePage.ts';
 import { BASE_UI_URL } from './config/environment.ts';
 import { logDecorator } from '../utils/decorators.ts';
+import { allure } from 'allure-playwright';
+import choise_env from '../../choise_CI_env.ts';
+
+choise_env()
 
 export class HomePage extends BasePage {
   public uniqeElement!: Locator;
@@ -18,10 +22,11 @@ export class HomePage extends BasePage {
     await this.page.goto(BASE_UI_URL);
   }
 
-  @logDecorator
   async login({ email, password }: { email: string; password: string }) {
-    await this.emailInput.fill(email);
-    await this.passwordInput.fill(password);
-    await this.loginButton.click();
+    await allure.step('Авторизация аккаунта', async () => {
+      await this.emailInput.fill(email);
+      await this.passwordInput.fill('password');
+      await this.loginButton.click();
+    });
   }
 }
