@@ -18,7 +18,6 @@ export class TransactionService {
     await this.addFundsService.addFunds(50);
 
     const response = await this.transactionController.getTransactions();
-    console.log(response.body);
     validateResponse(response, 200);
     schemaValidation(response.body, transactionsSchema);
     expect(response.body.transactionItems.length).toBeGreaterThanOrEqual(2);

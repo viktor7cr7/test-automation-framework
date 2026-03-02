@@ -30,6 +30,7 @@ export class BuyProductsPage extends BasePage {
   @logDecorator
   async navigatePagination(index: number) {
     await this.pagesNumeric.nth(index - 1).click();
+    console.log(123)
   }
 
   @logStepWithReturn

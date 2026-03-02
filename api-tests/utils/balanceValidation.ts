@@ -7,7 +7,6 @@ export async function balanceValidation(startBalance: number, totalPrice: number
   const currentBalance = await getBalance();
 
   const result = differenceBalance === currentBalance;
-  console.log(result)
   if (!result) {
     console.error(`Стартовый баланс = ${startBalance}
                    Итоговая цена = ${totalPrice}`);

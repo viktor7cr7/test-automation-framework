@@ -8,6 +8,15 @@ export function logDecorator(target: (this: Function, ...args: any[]) => void, c
   };
 }
 
+export function post(target: (this: Function, ...args: any[]) => void, context: ClassMethodDecoratorContext) {
+  return async function (this: Function, ...args: any[]) {
+    console.log(args)
+    return await allure.step(`POST ${String(context.name)} на методе ${this!.constructor.name}`, async () => {
+      return target.apply(this, args);
+    });
+  };
+}
+
 export function logStepWithReturn<This, Args extends any[], ReturnType>(
   target: (this: This, ...args: Args) => Promise<ReturnType>,
   context: ClassMethodDecoratorContext<This, (this: This, ...args: Args) => Promise<ReturnType>>
